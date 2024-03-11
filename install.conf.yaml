@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.config/nvim: kickstart.nvim
+    ~/.config/alacritty.toml: alacritty.toml
+    ~/.config/khotkeysrc: khotkeysrc #shortcuts for kde
+
+    #~/.wezterm.lua: wezterm.lua
+
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
