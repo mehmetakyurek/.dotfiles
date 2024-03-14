@@ -9,7 +9,7 @@
     ~/.config/nvim: kickstart.nvim
     ~/.config/alacritty.toml: alacritty.toml
     ~/.config/khotkeysrc: khotkeysrc #shortcuts for kde
-
+    ~/.zshrc: zshrc
     #~/.wezterm.lua: wezterm.lua
 
 

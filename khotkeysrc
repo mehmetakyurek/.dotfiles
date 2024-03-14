@@ -224,7 +224,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_3Triggers0]
-Key=
+Key=Ctrl+Alt+T
 Type=SHORTCUT
 Uuid={8632225d-e362-4fde-9903-1f325bbad2e6}
 
@@ -1115,6 +1115,9 @@ ColorScheme[$d]
 ColorSchemeHash[$d]
 TerminalApplication[$d]
 TerminalService[$d]
+XftAntialias[$d]
+XftHintStyle[$d]
+XftSubPixel[$d]
 
 [Gestures]
 Disabled=true
@@ -1143,6 +1146,7 @@ PathCombo Completionmode[$d]
 Show Bookmarks[$d]
 Show Full Path[$d]
 Show Inline Previews[$d]
+Show Preview[$d]
 Show Speedbar[$d]
 Show hidden files[$d]
 Sort by[$d]
