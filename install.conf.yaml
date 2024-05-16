@@ -10,8 +10,16 @@
     ~/.config/alacritty.toml: alacritty.toml
     ~/.config/khotkeysrc: khotkeysrc #shortcuts for kde
     ~/.zshrc: zshrc
-    #~/.wezterm.lua: wezterm.lua
-
+    ~/.config/alacritty/themes: 
+      create: true
+      path: alacritty-theme
+    ~/.tmux/plugins/tpm: 
+      create: true
+      path: tpm
+    ~/.config/rustfmt/rustfmt.toml:
+      create: true
+      path: rustfmt.toml
+    #.wezterm.lua: wezterm.lua
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
