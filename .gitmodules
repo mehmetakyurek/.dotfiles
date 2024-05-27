@@ -14,3 +14,6 @@
 [submodule "z"]
 	path = z
 	url = https://github.com/rupa/z
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/mehmetakyurek/nvim

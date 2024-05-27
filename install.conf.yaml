@@ -6,7 +6,7 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
-    ~/.config/nvim: kickstart.nvim
+    ~/.config/nvim: nvim
     ~/.config/alacritty.toml: alacritty.toml
     ~/.config/khotkeysrc: khotkeysrc #shortcuts for kde
     ~/.zshrc: zshrc
