@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 -- For example, changing the color scheme:
 --
 --Arthur
-config.color_scheme = 'Flatland'
+config.color_scheme = 'Kanagawa (Gogh)'
 config.window_padding = {
 	left = 0,
 	top = 0,
@@ -18,6 +18,7 @@ config.window_padding = {
 }
 config.hide_tab_bar_if_only_one_tab = true
 -- and finally, return the configuration to wezterm
-
+config.use_fancy_tab_bar = false
+config.font = wezterm.font("MonaspiceKr Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
 
 return config

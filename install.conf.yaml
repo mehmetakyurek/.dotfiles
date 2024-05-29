@@ -19,7 +19,7 @@
     ~/.config/rustfmt/rustfmt.toml:
       create: true
       path: rustfmt.toml
-    #.wezterm.lua: wezterm.lua
+    ~/.wezterm.lua: wezterm.lua
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
