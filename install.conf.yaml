@@ -1,6 +1,7 @@
 - defaults:
     link:
       relink: true
+      create: true
 
 - clean: ['~']
 
@@ -8,7 +9,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.config/nvim: nvim
     ~/.config/alacritty.toml: alacritty.toml
-    ~/.config/khotkeysrc: khotkeysrc #shortcuts for kde
+      #~/.config/khotkeysrc: khotkeysrc #shortcuts for kde
     ~/.zshrc: zshrc
     ~/.config/alacritty/themes: 
       create: true
@@ -19,7 +20,18 @@
     ~/.config/rustfmt/rustfmt.toml:
       create: true
       path: rustfmt.toml
-    ~/.wezterm.lua: wezterm.lua
+    # ~/.wezterm.lua: wezterm.lua
+    ~/.config/systemd/user/:
+      glob: true
+      path: services/*.service
+    ~/.config/environment.d/:
+      glob: true
+      path: services/*.conf
+    ~/.local/scripts: scripts
+    ~/.xbindkeysrc: xbindkeysrc
+    ~/.profile: .profile
+    ~/.config/rofi: rofi
+    ~/.config/i3: i3
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

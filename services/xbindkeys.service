@@ -1,0 +1,16 @@
+[Unit]
+PartOf=graphical-session.target
+Description=xbindkeys
+After=graphical-session.target
+
+[Service]
+Type=exec
+ExitType=cgroup
+ExecStart=:/usr/bin/xbindkeys
+Restart=no
+TimeoutStopSec=5s
+Slice=app.slice
+WorkingDirectory=-
+
+[Install]
+WantedBy=graphical-session.target

@@ -4,24 +4,39 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
 . ~/.dotfiles/z/z.sh
+
+. "$HOME/.cargo/env"
+. "$HOME/.profile" 
+# pnpm
+export PNPM_HOME="/home/akyurek/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+alias vim="nvim"
+
+fpath=(~/.zsh.d/ $fpath)
+
+#!!!Version managers make zsh so slow
+#https://superuser.com/questions/236953/zsh-starts-incredibly-slowly
+export PATH="$PATH:$HOME/.local/scripts"
+export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
+#go version manager
+#[[ -s "/home/akyurek/.gvm/scripts/gvm" ]] && source "/home/akyurek/.gvm/scripts/gvm"
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+# Created by `pipx` on 2024-03-24 10:12:26
+export PATH="$PATH:/home/akyurek/.local/bin"
+
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
@@ -100,27 +115,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-alias vim="nvim"
-
-fpath=(~/.zsh.d/ $fpath)
-
-#!!!Version managers make zsh so slow
-#https://superuser.com/questions/236953/zsh-starts-incredibly-slowly
-export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
-#go version manager
-#[[ -s "/home/akyurek/.gvm/scripts/gvm" ]] && source "/home/akyurek/.gvm/scripts/gvm"
-
-fpath+=${ZDOTDIR:-~}/.zsh_functions
-# Created by `pipx` on 2024-03-24 10:12:26
-export PATH="$PATH:/home/akyurek/.local/bin"
-
-# pnpm
-export PNPM_HOME="/home/akyurek/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

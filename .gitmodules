@@ -17,3 +17,4 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/mehmetakyurek/nvim
+	branch = main

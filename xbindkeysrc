@@ -1,0 +1,14 @@
+"jumpapp brave-browser &"
+  XF86Launch6
+"jumpapp alacritty -e tmux new-session -A -s main &"
+  XF86Launch8
+"$rofi/launcher_t7 &"
+  Control + Alt + i
+"$rofi/powermenu_t5 &"
+  Control + Alt + p
+"$applets/quicklinks.sh &"
+  Control + Alt + o
+"jummpapp -c spotify flatpak run com.spotify.Client &"
+  Control + Alt + m
+"jumpapp -N cheapino-configurator &"
+  XF86Launch7
