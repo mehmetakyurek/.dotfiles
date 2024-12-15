@@ -7,7 +7,7 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
-    ~/.config/nvim: nvim
+    # ~/.config/nvim: nvim
     ~/.config/alacritty.toml: alacritty.toml
       #~/.config/khotkeysrc: khotkeysrc #shortcuts for kde
     ~/.zshrc: zshrc
@@ -35,3 +35,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [./scripts/nvimrepoclone.sh]  
