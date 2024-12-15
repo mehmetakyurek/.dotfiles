@@ -1,5 +1,5 @@
 general.import = [
-    "~/.config/alacritty/themes/themes/kanagawa.toml"
+    # "~/.config/alacritty/themes/themes/kanagawa.toml"
 ]
 [font]
 normal = { family = "monaspicekr nerd font", style = "Regular" }
